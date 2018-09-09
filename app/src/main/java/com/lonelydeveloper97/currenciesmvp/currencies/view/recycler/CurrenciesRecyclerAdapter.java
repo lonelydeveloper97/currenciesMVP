@@ -49,7 +49,6 @@ public class CurrenciesRecyclerAdapter extends RecyclerView.Adapter<RecyclerView
         return position == 0 ? ViewHolderFactory.ViewTypes.BASE : ViewHolderFactory.ViewTypes.COMMON;
     }
 
-
     @Override
     public long getItemId(int position) {
         return position;

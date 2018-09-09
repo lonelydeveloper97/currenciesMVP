@@ -50,7 +50,6 @@ public class ConnectionFragment extends Fragment implements ConnectionContract.V
                 });
     }
 
-
     @Override
     public void hideNoConnectionWindow() {
         if (view.getVisibility() == View.GONE) {

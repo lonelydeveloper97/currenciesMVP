@@ -22,6 +22,4 @@ public interface CurrenciesContract {
             void updateBaseExternally(BaseCurrency baseCurrency);
         }
     }
-
-
 }

@@ -35,5 +35,4 @@ public class BaseCurrency implements Serializable {
         return Double.compare(baseCurrency.amount, amount) == 0 &&
                 name.equals(baseCurrency.name);
     }
-
 }
