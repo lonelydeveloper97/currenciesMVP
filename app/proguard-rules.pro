@@ -12,10 +12,35 @@
 #   public *;
 #}
 
-# Uncomment this to preserve the line number information for
-# debugging stack traces.
-#-keepattributes SourceFile,LineNumberTable
+##OkHttp
+-keepattributes Signature
+-keepattributes *Annotation*
+-keep class okhttp3.** { *; }
+-keep interface okhttp3.** { *; }
+-dontwarn okhttp3.**
+-dontnote okhttp3.**
 
-# If you keep the line number information, uncomment this to
-# hide the original source file name.
-#-renamesourcefileattribute SourceFile
+# Okio
+-keep class sun.misc.Unsafe { *; }
+-keep class okio.*
+-dontwarn java.nio.file.*
+-dontwarn org.codehaus.mojo.animal_sniffer.IgnoreJRERequirement
+-dontwarn javax.annotation.**
+
+##Retrofit
+-dontwarn retrofit.**
+-keep class retrofit.** { *; }
+-keepattributes Signature
+-keepattributes Exceptions
+-keepattributes Annotation
+
+##Gson
+-keep class sun.misc.Unsafe { *; }
+-keep class com.google.gson.stream.** { *; }
+
+##ReactiveNetwork
+-dontwarn com.github.pwittchen.reactivenetwork.library.rx2.ReactiveNetwork
+-dontwarn io.reactivex.functions.Function
+-dontwarn rx.internal.util.**
+-dontwarn sun.misc.Unsafe
+
