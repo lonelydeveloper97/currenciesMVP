@@ -1,10 +1,11 @@
 package com.lonelydeveloper97.currenciesmvp.currencies.model.update;
 
-import retrofit2.Call;
+
+import io.reactivex.Flowable;
 import retrofit2.http.GET;
 import retrofit2.http.Query;
 
 public interface CurrencyService {
     @GET("/latest")
-    Call<CurenciesResponse> getCurrencies(@Query("base") String base);
+    Flowable<CurrenciesResponse> getCurrencies(@Query("base") String base);
 }
