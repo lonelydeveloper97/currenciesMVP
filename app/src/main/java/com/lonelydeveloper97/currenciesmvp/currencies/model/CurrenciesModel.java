@@ -1,13 +1,15 @@
 package com.lonelydeveloper97.currenciesmvp.currencies.model;
 
-import java.util.List;
+import java.util.Map;
 
-import io.reactivex.Observable;
+import io.reactivex.Flowable;
 
 public interface CurrenciesModel {
-    Observable<List<Currency>> currencies();
+    BaseCurrency DEFAULT_BASE_CURRENCY = new BaseCurrency("EUR", 100);
 
-    Currency base();
+    Flowable<Map<String, Double>> currencies();
 
-    void updateBase(Currency base);
+    BaseCurrency base();
+
+    void updateBase(BaseCurrency base);
 }
